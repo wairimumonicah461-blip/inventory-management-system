@@ -136,4 +136,4 @@ The tests cover every route (success and error cases), the OpenFoodFacts integra
 
 ## Git Workflow
 
-Each feature was built on its own branch (`feature/flask-api`, `feature/cli`, `feature/tests`, `docs/readme`), merged into `main`, and then the branch was deleted.
+The project was committed to `main`. A new feature (delete confirmation in the CLI) was then built on its own branch (`feature/delete-confirmation`), merged through pull request #1, and the branch was deleted.
