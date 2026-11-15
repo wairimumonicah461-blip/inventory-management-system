@@ -83,6 +83,10 @@ def update_item():
 
 def delete_item():
     item_id = input("Item id to delete: ")
+    sure = input("Are you sure? (y/n): ")
+    if sure != "y":
+        print("Cancelled.")
+        return
     response = call_api("DELETE", f"/inventory/{item_id}")
     if response is None:
         return
