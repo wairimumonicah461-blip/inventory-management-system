@@ -68,7 +68,7 @@ def test_update_item(mock_request, mock_input, capsys):
     assert mock_request.call_args.kwargs["json"] == {"stock": 3}
 
 
-@patch("builtins.input", return_value="1")
+@patch("builtins.input", side_effect=["1", "y"])
 @patch("cli.requests.request")
 def test_delete_item(mock_request, mock_input, capsys):
     mock_request.return_value = fake_response(200, {"message": "Item deleted"})
